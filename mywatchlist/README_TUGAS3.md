@@ -1,5 +1,6 @@
 ---TUGAS 3 PBP---
-Link Deploy Heroku :
+Link Deploy Heroku : http://catalogpbp.herokuapp.com/mywatchlist/html/
+
 
 Jelaskan perbedaan antara JSON, XML, dan HTML!
 Ketiganya adalah sama sama format yang digunakan untuk menyimpan dan menukar informasi dari web server agar dapat dibaca oleh pengguna. Perbedaannya ada pada:
