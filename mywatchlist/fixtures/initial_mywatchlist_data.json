@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"Yes",
+            "title":"Twilight",
+            "rating": "4.5/5",
+            "release_date": "03 Desember 2008",
+            "review": "Comfort movie & Film Romance favorit of all time."
+        }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"Yes",
+            "title":"Train to Busan",
+            "rating": "3/5",
+            "release_date": "20 Juli 2016",
+            "review": "Salah satu film korea recommended tentang ayah yg nyelamatin anaknya dari zombie, sad endiing."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"Yes",
+            "title":"Orphan",
+            "rating": "4/5",
+            "release_date": "24 Juli 2009",
+            "review": "Film Thriller orphan yang bunuh seluruh keluarga angkat, keseluruhan filmnya sadis & agak creepy."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"Yes",
+            "title":"Five Feet Apart",
+            "rating": "4/5",
+            "release_date": "15 Maret 2019",
+            "review": "moral of the story-nya bagus buat ga patah semangat. Recommended!."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched":"Yes",
+            "title":"Pee Mak",
+            "rating": "3.5/5",
+            "release_date": "05 April 2013",
+            "review": "Film Horror-Romance Thailand tapi ada sisi komedinya & funny. Sad ending"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"Yes",
+            "title":"The Twilight Saga: Breaking Dawn – Part 1",
+            "rating": "4.5/5",
+            "release_date": "18 November 2011",
+            "review": "Best movie wedding scene of all time."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"Yes",
+            "title":"Crazy Rich Asians",
+            "rating": "3.5/5",
+            "release_date": "07 Agustus 2018",
+            "review": "Temanya unik tentang perbedaan etnis/budaya, Happy ending"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"Yes",
+            "title":"Extreme Job",
+            "rating": "3/5",
+            "release_date": "20 Februari 2019",
+            "review": "Film Action Korea tapi 60% Comedy, Ceritanya ringan & santai"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"Yes",
+            "title":"Harry Potter and the Goblet of Fire",
+            "rating": "4/5",
+            "release_date": "18 November 2005",
+            "review": "Jalan cerita & tema film nya keren."
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"Yes",
+            "title":"Titanic",
+            "rating": "4/5",
+            "release_date": "05 Januari 1998",
+            "review": "Salah satu film romance terbaik."
+        }
+    }
+]
