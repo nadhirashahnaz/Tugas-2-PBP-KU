@@ -37,3 +37,9 @@ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
             path('xml/', show_xml, name='show_xml'),
             path('json/', show_json, name='show_json'),
         - Terakhir, menjalankan perintah python manage.py runserver untuk menjalankannya.
+
+ScreenShoot Hasil 3 URL (Localhost dan Heroku) :
+Heroku  : ![SSTugas3_1]('../../SSTugas3_1.jpg?raw=true)
+JSON    : ![SSTugas3_2]('../../SSTugas3_2.jpg?raw=true)
+XML     : ![SSTugas3_3]('../../SSTugas3_3.jpg?raw=true)
+HTML    : ![SSTugas3_4]('../../SSTugas3_4.jpg?raw=true)
