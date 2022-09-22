@@ -108,8 +108,5 @@
             "release_date": "05 Januari 1998",
             "review": "Salah satu film romance terbaik."
         }
-    },
-    {
-        "stack": "heroku-xx"
     }
 ]
