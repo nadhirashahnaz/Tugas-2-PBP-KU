@@ -1,6 +1,6 @@
 ---------TUGAS 4 PBP-----------
 
-link Heroku :
+link Heroku : http://catalogpbp.herokuapp.com/todolist/
 
 Apa kegunaan {% csrf_token %} pada elemen <form>? 
     - CSRF Token dapat mencegah serangan CSRF yang akan membuat penyerang tidak mungkin melakukan permintaan HTTP yang secara sepenuhnya valid yang cocok untuk diumpankan ke pengguna. Tujuan utamanya adalah agar data yang dikirim ke server berasal dari website milik kita. Mencegah orang lain mengirim data ke servey tanpa melewati aplikasi.
