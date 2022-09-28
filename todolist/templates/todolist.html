@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Tugas 4 Assignment PBP/PBD</h1>
+    <form method="GET" action="create-task/">
+        <input class="btn create_btn" type="submit" value="Create New Task">
+    </form>
+
+  <table class="todolist">
+    <thead>
+        <tr>
+        <th>Date</th>
+        <th>Task</th>
+        <th>Description</th>
+        </tr>
+    <thead>
+
+    <tbody>
+    {% for data in data_todolist %}
+        <tr>
+            <td>{{data.date}}</td>
+            <td>{{data.title}}</td>
+            <td>{{data.description}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  <h5>Last login session: {{last_login}}</h5>
+  <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+  {% endblock content %}
+
+</body>
