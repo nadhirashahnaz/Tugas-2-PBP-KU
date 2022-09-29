@@ -64,6 +64,7 @@ def register(request):
     context = {'form':form}
     return render(request, 'register.html', context)
 
+
 def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -84,3 +85,17 @@ def logout_user(request):
     response = response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
+
+
+@login_required(login_url='/todolist/login/')
+def delete_task(request,id):
+    task = Task.objects.get(id=id)
+    task.delete()
+    return redirect('todolist:show_todolist')
+
+
+def status(request,id):
+    task = Task.objects.get(id=id)
+    task.is_finished= not task.is_finished
+    task.save(update_fields=["is_finished"])
+    return redirect('todolist:show_todolist')

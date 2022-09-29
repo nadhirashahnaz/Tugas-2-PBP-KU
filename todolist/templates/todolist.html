@@ -10,18 +10,35 @@
   <table class="todolist">
     <thead>
         <tr>
+        <th>Done</th>
+        <th>Status</th>
         <th>Date</th>
         <th>Task</th>
         <th>Description</th>
+        <th>Delete</th>
+
         </tr>
     <thead>
 
     <tbody>
     {% for data in data_todolist %}
         <tr>
+            <td>
+              <button><a href="data-status/{{data.pk}}">Done</a></button>
+            </td>
+
+            {% if data.is_finished == True%}
+            <td>✅</td>
+            {% else %}
+            <td>❌</td>
+            {% endif %}
+
             <td>{{data.date}}</td>
             <td>{{data.title}}</td>
             <td>{{data.description}}</td>
+            <td>
+              <a href="delete-task/{{data.pk}}"><button>🗑️</button></a></td>
+          </td>
         </tr>
         {% endfor %}
     </tbody>
