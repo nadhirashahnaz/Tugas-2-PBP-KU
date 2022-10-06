@@ -2,34 +2,93 @@
 
  {% block meta %}
  <title>New Task</title>
+     <!--INCLUDING BOOTSTRAP-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  {% endblock meta %}
 
  {% block content %}
 
+ <style>
+    body {
+        background-color: #f4f7f6;
+        font-family: 'Times New Roman', sans-serif;
+        font-weight: 900rem;
 
+    }
+    .primary-heading {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        margin-top: 30 px;
+        font-weight: bold;
+        color: rgb(181, 82, 82);
+
+    }
+    .separator {
+    background-color: #934343;
+    }
+    .body {
+        padding-top: 10px;
+        padding: 10px;
+    }
+    .btn {
+        border-radius: 20px;
+        border: rgb(149, 68, 68);
+        background-color: #a95246;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: medium
+
+    }
+    button:hover{
+        background-color: #a95246;
+    }
+    p {
+        color: #a4161a;
+    }
+    input:hover {
+        transform: scale(1.01);
+        box-shadow: 0 10px 20px #a4161a, 0 4px 8px rgba(90, 74, 94, 0.06);
+    }
+
+</style>
 
  <div class = "new_task">
-    <h1>Create A New Task</h1>
-    <table>
+    <h1 class="primary-heading">📑💓Create A New Task💓📑</h1>
+        <div class="separator" style="padding:1px ;" ></div>
             <form method="POST" action="/todolist/create-task/">
                 {% csrf_token %}
                 <tr>
-                    <td>Title: </td>
-                    <td> <input type="text" name="task_title" placeholder="Your task title" class="form-control"></td>
+                    <div class="form-outline mb-4">
+                        <td style="text-align: center;color:#d7005d">Title: </td>
+                        <td> <input type="text" name="task_title" placeholder="Your task title" class="form-control"></td>
+                    </div>                    
                 </tr>
 
                 <tr>
-                    <td>Description: </td>
-                    <td><textarea name="description" class="form-control" rows="3"></textarea></td>
+                    <div class="form-outline mb-4">
+                        <td style="text-align: center;color:#d7005d">Description: </td>
+                        <td><textarea name="description" class="form-control" rows="3"></textarea></td>
+                    </div>
+                    
                 </tr>
 
                 <tr>
-                    <td></td>
-                    <td><input type="submit" value="Create"></td>
+
+                    <button class="btn btn-block btn-primary" type="submit">Create</button>
             </form>
+            <br>
 
             <form method="GET" action="/todolist/">
-                <td><input type="submit" value="Cancel"></td>
+                <button class="btn btn-block btn-primary" type="submit">Cancel</button>
             </form>
         </tr>
 
@@ -41,7 +100,6 @@
         </ul>
         {% endif %}
 
-    </table>
 </div>
 
  {% endblock content %}
