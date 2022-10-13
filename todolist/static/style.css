@@ -1,0 +1,128 @@
+body {
+    font-family: 'Helvetica Now', sans-serif;
+    font-weight: 800rem;
+    background-color: #f4f7f6;
+}
+.header {
+    padding: 10px;
+    padding-left: 15px;
+    text-align: center;
+}
+.primary-heading {
+    font-size: 4rem;
+    font-family: 'Helvetica Now', sans-serif ;
+    font-weight: bold;
+    color: #8b332e;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+.batas {
+  background-color: #2e4b5f;
+}
+.body {
+    padding-top: 15px;
+    padding: 15px;
+}
+
+.lastLogin {
+    margin-top: 26px;
+}
+button {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 25px;
+    border: rgb(137, 78, 78);
+    background-color: #fdfdfc ;
+    border: 1px solid #313d3d;
+    padding: 5px 15px;
+
+}
+button:hover{
+    background-color:#eaecef ;
+}
+a, a:hover {
+    color: #205e5e;
+    font-size: 13px;
+    text-decoration-line: none;
+}
+
+
+h1, h3, h4 {
+  font-size: xx-large;
+  color: #95733c;
+  margin-bottom: 9px;
+  margin-top: 9px;
+
+}
+
+h3 {
+  font-size: large;
+  font-weight: large;
+}
+
+h4 {
+  font-size: small;
+  text-align: right;
+  font-weight: small;
+}
+
+#desc {
+  position: relative;
+}
+#done {
+  font-size: small;
+  font-weight:bold;
+  color: #a191ca;
+  
+}
+
+.badge-success {
+  background-color: #d0c1de ;
+}
+
+
+.card-header {
+  background-color: #fdfdfc;
+  vertical-align: middle;
+  align-content: center;
+  align-items: middle;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  
+}
+.card-body {
+  background-color: #FFC0CB;
+  padding-left: 30px;
+  padding-bottom: 5px;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+p {
+    margin-top: 10px;
+    font-size: large;
+    color: #006a6a;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+
+#inprogress {
+  font-size: small;
+  font-weight: bold;
+  color: #b75e5d;
+ 
+}
+
+.badge-warning {
+  background-color: #fdecc8 ;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(204, 0, 0);
+}
+

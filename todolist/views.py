@@ -7,7 +7,10 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound
+from django.core import serializers
 
+##fungsi show_todos
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
@@ -20,6 +23,37 @@ def show_todolist(request):
     }
     return render(request, "todolist.html", context)
 
+def submit_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        
+        new_data = Task(user=request.user, title=title, description=description, date=datetime.datetime.now())
+        new_data.save()
+        return HttpResponse(b"CREATED", status=201)
+    return HttpResponseNotFound()
+
+@login_required(login_url='/todolist/login/')
+def todolist_ajax(request):
+    context = {
+        'last_login': request.COOKIES['last_login'],
+        'name' : request.user,
+    }
+    return render(request, 'todolist_ajax.html', context)
+
+@login_required(login_url='/todolist/login/')
+def show_json(req):
+    task_list = Task.objects.filter(user=req.user)
+    return HttpResponse(serializers.serialize("json", task_list), content_type="application/json")
+
+def get_todolist_json(request):
+    tasks = Task.objects.filter(user = request.user)
+    for task in tasks:
+        if task.is_finished:
+            task.status = 'Done'
+        else:
+            task.status = 'Not Yet'
+    return HttpResponse(serializers.serialize('json', tasks))
 
 @login_required(login_url='/todolist/login/')
 def create_task(request):
@@ -85,6 +119,15 @@ def logout_user(request):
     response = response = HttpResponseRedirect(reverse('todolist:login'))
     response.delete_cookie('last_login')
     return response
+
+@login_required(login_url='/todolist/login/')
+def show_todos(request):
+    data_todolist = Task.objects.filter(user = request.user)
+    context = {'username': request.COOKIES['username'],
+               'last_login': request.COOKIES['last_login'],
+               'todos': data_todolist,
+              }
+    return render(request,'todolist_ajax.html', context)
 
 
 @login_required(login_url='/todolist/login/')
