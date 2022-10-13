@@ -11,3 +11,8 @@ Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma Event-Driven P
 
 Jelaskan penerapan asynchronous programming pada AJAX.
     Membuat view dan url path baru yang mereturn sebuah response JSON. Pada tugas ini terdapat function get serta post untuk mengambil serta mengirim data JSON ke server, serta mengatur tampilan pada Todolist secara asynchronous sesuai data yang ada pada database.
+    
+Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+    - Membuat function baru yang mereturn response berupa JSON
+    - Menambahkan atribut onClick di button Create-Task dan modals pop up
+    - Menambahkan function javascript untuk get dan post request ke server

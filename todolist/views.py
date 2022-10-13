@@ -23,6 +23,19 @@ def show_todolist(request):
     }
     return render(request, "todolist.html", context)
 
+
+@login_required(login_url='/todolist/login/')
+def show_todolist_ajax(request):
+    this_user = request.user
+    data_todolist = Task.objects.filter(user=this_user)
+    context = {
+        'data_todolist': data_todolist,
+        'last_login': request.COOKIES['last_login'],
+        'name' : this_user
+    }
+    return render(request, "todolist_ajax.html", context)
+
+
 def submit_ajax(request):
     if request.method == 'POST':
         title = request.POST.get('title')
@@ -33,13 +46,6 @@ def submit_ajax(request):
         return HttpResponse(b"CREATED", status=201)
     return HttpResponseNotFound()
 
-@login_required(login_url='/todolist/login/')
-def todolist_ajax(request):
-    context = {
-        'last_login': request.COOKIES['last_login'],
-        'name' : request.user,
-    }
-    return render(request, 'todolist_ajax.html', context)
 
 @login_required(login_url='/todolist/login/')
 def show_json(req):
@@ -142,3 +148,17 @@ def status(request,id):
     task.is_finished= not task.is_finished
     task.save(update_fields=["is_finished"])
     return redirect('todolist:show_todolist')
+
+
+@login_required(login_url='/todolist/login/')
+def delete_task_ajax(request,id):
+    task = Task.objects.get(id=id)
+    task.delete()
+    return redirect('todolist:show_todolist_ajax')
+
+
+def status_ajax(request,id):
+    task = Task.objects.get(id=id)
+    task.is_finished= not task.is_finished
+    task.save(update_fields=["is_finished"])
+    return redirect('todolist:show_todolist_ajax')
